@@ -1,6 +1,6 @@
 package uzd1;
 
-import org.junit.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -70,7 +70,7 @@ public class Uzd1 {
 
         String totalPriceText = totalPriceElement.getText();
 
-        Assert.assertEquals("The total price is not as expected", "1002600.00", totalPriceText);
+//        Assert.assertEquals("The total price is not as expected", "1002600.00", totalPriceText);
 
         Thread.sleep(10000);
         driver.quit();

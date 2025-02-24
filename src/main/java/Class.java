@@ -3,7 +3,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.junit.Assert;
 import uzd1.Uzd1;
 import uzd2.Uzd2;
 
