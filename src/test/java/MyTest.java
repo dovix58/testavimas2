@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import uzd3.UserRegistration;
 
 import java.io.BufferedReader;
@@ -24,11 +25,17 @@ public class MyTest {
     @BeforeClass
     public static void setUpBeforeClass() {
         userDetails = UserRegistration.registerNewUser();
+
     }
 
     @Before
     public void setUp() {
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");  // Run Chrome in headless mode
+        options.addArguments("--no-sandbox"); // Required for Jenkins
+        options.addArguments("--disable-dev-shm-usage"); // Prevent shared memory issues
+
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     }
 
