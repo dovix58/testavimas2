@@ -51,7 +51,7 @@ public class Uzd2 {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
         driver.manage().window().maximize();
-
+        //javascript executor
         driver.get("https://web.archive.org/web/20240112153757/https://demoqa.com/");
         driver.findElement(By.xpath("//h5[text() = 'Elements']")).click();
         driver.findElement(By.xpath("//span[text() ='Web Tables']")).click();

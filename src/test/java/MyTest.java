@@ -1,13 +1,14 @@
-package uzd3;
 
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import uzd3.UserRegistration;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -16,7 +17,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Test {
+public class MyTest {
     private WebDriver driver;
     private static UserRegistration.UserDetails userDetails;
 
@@ -120,14 +121,14 @@ public class Test {
         Assert.assertTrue(successMessage.contains("Your order has been successfully processed!"));
     }
 
-    @org.junit.Test
+    @Test
     public void test1() throws IOException {
         login();
         addProductsToCart("src//main//java//uzd3//data1.txt");
         checkoutProcess();
     }
 
-    @org.junit.Test
+    @Test
     public void test2() throws IOException {
         login();
         addProductsToCart("src//main//java//uzd3//data2.txt");
