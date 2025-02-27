@@ -36,7 +36,7 @@ public class MyTest {
         options.addArguments("--disable-dev-shm-usage");
 
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @After
@@ -131,14 +131,14 @@ public class MyTest {
     @Test
     public void test1() throws IOException {
         login();
-        addProductsToCart("src//main//java//uzd3//data1.txt");
+        addProductsToCart("src//test//java//data1.txt");
         checkoutProcess();
     }
 
     @Test
     public void test2() throws IOException {
         login();
-        addProductsToCart("src//main//java//uzd3//data2.txt");
+        addProductsToCart("src//test//java//data2.txt");
         checkoutProcess();
     }
 }
