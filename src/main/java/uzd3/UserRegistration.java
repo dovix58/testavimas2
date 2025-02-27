@@ -3,6 +3,7 @@ package uzd3;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.Random;
 
@@ -30,7 +31,11 @@ public class UserRegistration {
     }
 
     public static UserDetails  registerNewUser() {
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://demowebshop.tricentis.com/");
 

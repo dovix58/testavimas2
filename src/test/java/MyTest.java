@@ -31,9 +31,9 @@ public class MyTest {
     @Before
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");  // Run Chrome in headless mode
-        options.addArguments("--no-sandbox"); // Required for Jenkins
-        options.addArguments("--disable-dev-shm-usage"); // Prevent shared memory issues
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
 
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
