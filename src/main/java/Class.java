@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import uzd1.Uzd1;
 import uzd2.Uzd2;
+import uzd4.scenario;
 
 import java.time.Duration;
 import java.util.List;
@@ -14,7 +15,8 @@ public class Class {
     public static void main(String args[]) throws InterruptedException {
 //        Uzd1.uzd1run();
 //        Uzd2.run1();
-        Uzd2.run2();
+//        Uzd2.run2();
+        scenario.run();
     }
 
 }
